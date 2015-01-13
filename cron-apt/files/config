@@ -1,0 +1,9 @@
+{% set cronapt = salt['pillar.get']('cron-apt', {}) -%}
+{{ pillar['filebanner']['banner#'] }}
+#
+# Configuration for cron-apt. For further information about the possible
+# configuration settings see /usr/share/doc/cron-apt/README.gz.
+
+{%- for config_entry in cronapt.get('config', []) %}
+{{ config_entry }}
+{%- endfor %}
