@@ -1,0 +1,4 @@
+cron-apt:
+  config:
+    - MAILON="update"
+    - MAILTO="na@nowhere.com"
